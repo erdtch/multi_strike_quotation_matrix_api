@@ -10,7 +10,9 @@ from scipy.stats import norm
 from math import sqrt, exp
 import json
 
-quotes = ['ADVANC', 'AOT', 'AAV', 'BTS', 'PTT']
+quotes = ['ADVANC', 'AOT', 'BANPU', 'BBL', 'BDMS', 'BEM', 'BGRIM', 'BH', 'BJC', 'BPP', 'BTS', 'CBG', 'CPALL', 'CPF',
+          'CPN', 'DELTA', 'DTAC', 'EA', 'EGCO', 'GLOBAL', 'GPSC' ,'PTT', 'GULF', 'KTC', 'SCB', 'INTUCH', 'IVL', 'LH', 'TCAP',
+          'TISCO', 'TMB', 'TRUE', 'SCC', 'TOA', 'TOP', 'TU', 'MINT']
 
 class DataSimulatorCSV:
     def __init__(self, quotes=[], start_date='2019-03-01', end_date='2019-10-01', rolling_range=60):
@@ -50,7 +52,7 @@ class DataSimulatorCSV:
         for quote in quotes :
             if quote == 'COM7':
                 quote = 'COM_SEVEN'
-            csv_file = "C:\\Users\\root\\Desktop\\MatrixFlask\\SET100_Dataset\\"  + quote + '.csv'
+            csv_file = "SET100_Dataset/"  + quote + '.csv'
             try : 
                 df = pd.read_csv(csv_file)
 
