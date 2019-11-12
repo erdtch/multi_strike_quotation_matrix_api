@@ -313,7 +313,7 @@ def term_sheet():
 if __name__ == '__main__':
     sim = DataSimulatorCSV(quotes, '2019-6-01', '2019-10-28')
     prices, ret, ret_std  = sim.next_data()
-    app.run(debug = True)
+    app.run(host='0.0.0.0',debug = True)
 
 
 
